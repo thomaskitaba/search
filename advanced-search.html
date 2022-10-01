@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Search</title>
+        <!-- CSS only -->
+        <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> -->
+        <style>
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+    body{
+        background-color: white;
+        
+    }
+
+    .container{
+        position: relative;
+        width: 100%;
+        height:100vh;
+        
+    }
+    .header{
+        
+        border-bottom: 2px solid rgb(170, 166, 166);
+
+    }
+    .nav{
+        position: relative;
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        justify-content: flex-end;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+    .nav-list-1{
+position: absolute;
+top: 50%;
+left: 0;
+font-size: 1.25rem;
+color:rgb(220, 22, 22);
+transform: translate(10% ,-50%);
+}
+.nav a{
+    text-decoration: none;
+
+}
+
+.center-body{
+    padding: 40px;
+    width: 100%;
+    
+}
+.main-form{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+}
+
+.main-form input{
+    height: 30px;
+    justify-content: end;
+    
+}
+.all-words, .exact-word, .any-word, .no-word{
+    display: flex;
+    gap: 20px;
+
+}
+
+input{
+    height: 30px;
+    width: 90%;
+
+}
+table{
+    width: 75%;
+    margin: 10px;
+    padding-left:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* border: 2px dashed rgb(17, 0, 255); */
+}
+
+.search-options{
+    width: max-content;
+    width: 197px;
+    height: 37px
+}
+.bottom-table{
+    display:flex;
+
+position: relative;
+
+}
+
+td{
+    padding: 5px;
+}
+.advanced-btn{
+    margin-left: 41%;
+    width: max-content;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: rgb(66, 115, 229);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+.advanced-btn:hover{
+    box-shadow: 3px 3px 4px 0px rgb(85, 85, 85) inset;
+}
+.bottom-search{ 
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width:900px){
+    input{
+        width: 500px;
+    }
+    
+    
+}
+@media (max-width:600px){
+    .bottom-table{
+justify-content: flex-start;
+
+}
+.advanced-btn{
+    margin:0px;
+}
+}
+
+
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <ul class="nav">
+                    <li class="nav-list-1"> Advanced Search</li>
+                    <li class="nav-list-2"> <a href="index.html"> Back </a>
+                    </li>
+                    <li class="nav-list-3"><a href="advanced-search.html">Advanced
+                            Search </a></li>
+                </ul>
+            </div>
+
+            <div class="center-body">
+                <form action="https://www.google.com/search" type="submit" >
+                <table>
+                    <tr>
+                        <th><p>Find pages with... </p></th>
+                    </tr>
+                    <tr>
+                        <td class="search-options">all these words:</td>
+                        <td> <input name="as_q" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="search-options">this exact word or phrase:</td>
+                        <td> <input name="as_epq" type="text"></td>
+                    </tr>
+                    <tr>
+                        <tr>
+                            <td class="search-options">any of these words::</td>
+                            <td> <input name="as_oq" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="search-options">none of these words::</td>
+                            <td> <input name="as_eq" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td > 
+                                <div class="bottom-table"><button
+                                    class="advanced-btn">Advanced Search</button>
+                                
+                                </td>
+                        </tr>
+                    </table>
+                </form>
+
+                </div>
+
+            </div>
+        </body>
+    </html>
+
+    <!-- 
+    <div> Find pages with... </div>
+                <form class="main-form" action="www.google.com/advanced_search.html">
+                    
+                    <div class = "all-words">
+                        <p> all these words: </p>
+                        <input name="" type="text">
+                    </div>
+                    
+                    <div class = "exact-word"> 
+                        <p> this exact word or phrase: </p>
+                        <input name="" type="text">
+                    </div>
+
+                    <div class = "any-word"> 
+                        <p> all these words: </p>
+                        <input name="" type="text">
+                    </div>
+
+                    <div class = "no-word"> 
+                        <p> all these words: </p>
+                        <input name="" type="text">
+                    </div>
+                    <button type="submit" > Advance Search</button>
+                </form>
+-->
